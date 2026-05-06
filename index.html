@@ -74,7 +74,7 @@
       <p>
         <a
           class="bookmarklet"
-          href='javascript:(()=>{const m=location.pathname.match(/^\/github\/pr\/([^/]+)\/([^/]+)\/(\d+)\/?$/);if(!m)return alert("Not a Graphite GitHub PR URL");location.href="https://github.com/"+m[1]+"/"+m[2]+"/pull/"+m[3];})()'
+          href='javascript:(()=>{const m=location.pathname.match(/^\/github\/pr\/([^/]+)\/([^/]+)\/(\d+)(?:\/.*)?$/);if(!m)return alert("Not a Graphite GitHub PR URL");location.href="https://github.com/"+m[1]+"/"+m[2]+"/pull/"+m[3];})()'
         >gt &rarr; gh</a>
       </p>
     </main>
