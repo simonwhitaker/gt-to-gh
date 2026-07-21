@@ -95,6 +95,15 @@
           href='javascript:(()=>{const m=location.hostname==="gist.github.com"&&location.pathname.match(/^\/(?:[^/]+\/)?([0-9a-f]+)(?:\/.*)?$/);if(!m)return alert("Not a GitHub gist URL");location.href="https://gisthost.github.io/?"+m[1];})()'
         >gist &rarr; gisthost</a>
       </p>
+
+      <h2>Gist to Gist.io</h2>
+      <p>Click it from a GitHub gist page to read the gist on <code>gist.io</code>.</p>
+      <p>
+        <a
+          class="bookmarklet"
+          href='javascript:(()=>{if(location.hostname!=="gist.github.com")return alert("Not a GitHub gist URL");const m=location.pathname.match(/^\/([^/]+)\/([0-9a-f]+)(?:\/.*)?$/);if(!m)return alert("gist.io needs a gist URL that includes the username");location.href="https://gist.io/@"+m[1]+"/"+m[2];})()'
+        >gist &rarr; gist.io</a>
+      </p>
     </main>
   </body>
 </html>

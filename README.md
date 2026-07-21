@@ -6,6 +6,8 @@ A tiny static page providing a collection of bookmarklets. Currently includes:
   request.
 - **gist -> gisthost**: jump from a GitHub gist to the corresponding
   `gisthost.github.io` page.
+- **gist -> gist.io**: jump from a GitHub gist to the corresponding `gist.io`
+  page.
 
 ## Usage
 
