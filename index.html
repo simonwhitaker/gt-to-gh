@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Graphite to GitHub PR Bookmarklet</title>
+    <title>Bookmarklets</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -34,6 +34,12 @@
         margin: 0 0 12px;
         font-size: clamp(1.75rem, 4vw, 2.5rem);
         line-height: 1.1;
+      }
+
+      h2 {
+        margin: 32px 0 12px;
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        line-height: 1.2;
       }
 
       p {
@@ -69,13 +75,25 @@
   </head>
   <body>
     <main>
-      <h1>Graphite to GitHub PR</h1>
-      <p>Drag this link to your bookmarks bar, then click it from a Graphite PR page to go to the corresponding Github page.</p>
+      <h1>Bookmarklets</h1>
+      <p>Drag a link to your bookmarks bar, then click it from a matching page.</p>
+
+      <h2>Graphite to GitHub PR</h2>
+      <p>Click it from a Graphite PR page to go to the corresponding GitHub page.</p>
       <p>
         <a
           class="bookmarklet"
           href='javascript:(()=>{const m=location.pathname.match(/^\/github\/pr\/([^/]+)\/([^/]+)\/(\d+)(?:\/.*)?$/);if(!m)return alert("Not a Graphite GitHub PR URL");location.href="https://github.com/"+m[1]+"/"+m[2]+"/pull/"+m[3];})()'
         >gt &rarr; gh</a>
+      </p>
+
+      <h2>Gist to Gisthost</h2>
+      <p>Click it from a GitHub gist page to open the gist on <code>gisthost.github.io</code>.</p>
+      <p>
+        <a
+          class="bookmarklet"
+          href='javascript:(()=>{const m=location.hostname==="gist.github.com"&&location.pathname.match(/^\/(?:[^/]+\/)?([0-9a-f]+)(?:\/.*)?$/);if(!m)return alert("Not a GitHub gist URL");location.href="https://gisthost.github.io/?"+m[1];})()'
+        >gist &rarr; gisthost</a>
       </p>
     </main>
   </body>

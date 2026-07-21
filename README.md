@@ -4,6 +4,8 @@ A tiny static page providing a collection of bookmarklets. Currently includes:
 
 - **gt -> gh**: jump from a Graphite PR page to the matching GitHub pull
   request.
+- **gist -> gisthost**: jump from a GitHub gist to the corresponding
+  `gisthost.github.io` page.
 
 ## Usage
 
